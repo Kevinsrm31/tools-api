@@ -5,6 +5,8 @@ actualizar y borrar) sobre un catálogo de herramientas informáticas
 clasificadas por categoría: lenguajes de datos, cloud, bases de datos,
 desarrollo, visualización, etc.
 
+**🚀 Demo en vivo:** https://tools-api-2quh.onrender.com/docs — desplegada en Render (plan gratuito: si estuvo inactiva, la primera carga tarda ~30–50 s).
+
 ## Caso de uso
 
 La API es la base de un sistema de recomendación de herramientas según el
@@ -72,6 +74,15 @@ uvicorn main:app --reload
 ```
 
 Luego abrir http://127.0.0.1:8000/docs.
+
+## Despliegue
+
+Desplegada en Render como Web Service (Python):
+
+- Build command: `pip install -r requirements.txt`
+- Start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+
+Cada push a `main` dispara un nuevo despliegue automático.
 
 ## Alcance actual
 
